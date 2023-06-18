@@ -4,7 +4,7 @@
 /**
  * main - a program will assign a random num to the var n each time it is +x
  *
- * Return = Always (0)
+ * Return: Always 0
  *
  */
 int main(void)
