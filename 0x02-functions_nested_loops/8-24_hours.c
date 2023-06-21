@@ -13,6 +13,8 @@ void jack_bauer(void)
 	{
 		for (m = 0 ; m <= 60 ; m++)
 		{
+			if (h >= 24 && m >= 60)
+				break;
 			_putchar(h / 10 + '0');
 			_putchar(h % 10 + '0');
 			_putchar(':');
