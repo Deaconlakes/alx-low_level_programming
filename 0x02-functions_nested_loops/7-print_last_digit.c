@@ -20,6 +20,6 @@ int print_last_digit(int n)
 	else
 	{
 		_putchar(j + 48);
-		return (1);
+		return (j);
 	}
 }
