@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * puts2 - function that print every char of string
  * @str: input
@@ -11,7 +12,7 @@ void puts2(char *str)
 	while (str[a] != '\0')
 	{
 		putchar(str[a]);
-		a += 1;
+		a += 2;
 	}
 	putchar('\n');
 }
