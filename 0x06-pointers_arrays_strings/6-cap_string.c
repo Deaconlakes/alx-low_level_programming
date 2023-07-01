@@ -7,29 +7,29 @@
  */
 char *cap_string(char *str)
 {
-	int clue = 0;
+	int i = 0;
 
-	while (str[clue])
+	while (str[i])
 	{
-		while (!(str[clue] >= 'a' && str[clue] <= 'z'))
-			clue++;
-		if (str[clue - 1] == ' ' ||
-		    str[clue - 1] == '\t' ||
-		    str[clue - 1] == '\n' ||
-		    str[clue - 1] == ',' ||
-		    str[clue - 1] == ';' ||
-		    str[clue - 1] == '.' ||
-		    str[clue - 1] == '!' ||
-		    str[clue - 1] == '?' ||
-		    str[clue - 1] == '"' ||
-		    str[clue - 1] == '(' ||
-		    str[clue - 1] == ')' ||
-		    str[clue - 1] == '{' ||
-		    str[clue - 1] == '}' ||
-		    clue == 0)
-			str[clue] = 32;
+		while (!(str[i] >= 'a' && str[i] <= 'z'))
+			i++;
+		if (str[i - 1] == ' ' ||
+		    str[i - 1] == '\t' ||
+		    str[i - 1] == '\n' ||
+		    str[i - 1] == ',' ||
+		    str[i - 1] == ';' ||
+		    str[i - 1] == '.' ||
+		    str[i - 1] == '!' ||
+		    str[i - 1] == '?' ||
+		    str[i - 1] == '"' ||
+		    str[i - 1] == '(' ||
+		    str[i - 1] == ')' ||
+		    str[i - 1] == '{' ||
+		    str[i - 1] == '}' ||
+		    i == 0)
+			str[i] = 32;
 
-		clue++;
+		i++;
 	}
 	return (str);
 }
