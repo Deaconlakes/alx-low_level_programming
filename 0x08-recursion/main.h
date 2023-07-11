@@ -14,5 +14,6 @@ int prime_num(int a, int b);
 int is_palindrome(char *s);
 int compare_str(char *s, int left, int right);
 int strlen_recur(char *s);
+int wildcmp(char *s1, char *s2);
 
 #endif
