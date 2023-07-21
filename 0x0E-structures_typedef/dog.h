@@ -7,12 +7,12 @@
  * @owner: the owner of the dog
  * Desc: defining a new type of struct dog
  */
-struct dog
+typedef struct dog
 {
 	char *name;
 	float age;
 	char *owner;
-};
+} dog-t;
 
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
