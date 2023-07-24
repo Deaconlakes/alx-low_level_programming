@@ -2,18 +2,18 @@
 #include <stdlib.h>
 /**
  * print_opcodes - func to print opcodes of the program
- * @i: address to the main function
+ * @a: address to the main function
  * @n: numbers of bytes to print
  * Return: void
  */
-void print_opcodes(char *i, int n)
+void print_opcodes(char *a, int n)
 {
-	int a;
+	int i;
 
-	for (a = 0; a < n; a++)
+	for (i = 0; i < n; i++)
 	{
-	printf("%2.hhx", i[a]);
-	if (a < n - 1)
+	printf("%.2hhx", a[i]);
+	if (i < n - 1)
 		printf(" ");
 	}
 	printf("\n");
