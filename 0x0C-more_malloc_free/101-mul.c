@@ -3,10 +3,12 @@
 #include <stdio.h>
 
 #define ERR_MSG "Error"
+
 /**
- * is_digit - check if a str contains non digit char
- * @s: string to be checked
- * Return: 0 if success, 1 otherwise
+ * is_digit - checks if a string contains a non-digit char
+ * @s: string to be evaluated
+ *
+ * Return: 0 if a non-digit is found, 1 otherwise
  */
 int is_digit(char *s)
 {
@@ -16,14 +18,16 @@ int is_digit(char *s)
 	{
 		if (s[i] < '0' || s[i] > '9')
 			return (0);
+		i++;
 	}
 	return (1);
 }
 
 /**
- * _strlen - funct to return len of str
- * @s: string to be checked
- * Return: the len of the string
+ * _strlen - returns the length of a string
+ * @s: string to evaluate
+ *
+ * Return: the length of the string
  */
 int _strlen(char *s)
 {
@@ -37,19 +41,20 @@ int _strlen(char *s)
 }
 
 /**
- * error - fixes errors for main
+ * errors - handles errors for main
  */
-void error(void)
+void errors(void)
 {
 	printf("Error\n");
 	exit(98);
 }
 
 /**
- * main - multiples of two positive numbers
- * @argc: numbers of argument
- * @argv: arrays of argument
- * Return: 0 if succesful
+ * main - multiplies two positive numbers
+ * @argc: number of arguments
+ * @argv: array of arguments
+ *
+ * Return: always 0 (Success)
  */
 int main(int argc, char *argv[])
 {
@@ -58,12 +63,12 @@ int main(int argc, char *argv[])
 
 	s1 = argv[1], s2 = argv[2];
 	if (argc != 3 || !is_digit(s1) || !is_digit(s2))
-		error();
+		errors();
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
 	len = len1 + len2 + 1;
 	result = malloc(sizeof(int) * len);
-	if (result)
+	if (!result)
 		return (1);
 	for (i = 0; i <= len1 + len2; i++)
 		result[i] = 0;
@@ -94,3 +99,4 @@ int main(int argc, char *argv[])
 	free(result);
 	return (0);
 }
+
