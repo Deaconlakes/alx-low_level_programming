@@ -19,6 +19,7 @@ int is_digit(char *s)
 	}
 	return (1);
 }
+
 /**
  * _strlen - funct to return len of str
  * @s: string to be checked
@@ -34,14 +35,16 @@ int _strlen(char *s)
 	}
 	return (i);
 }
+
 /**
- * errors - fixes errors for main
+ * error - fixes errors for main
  */
-void errors(void)
+void error(void)
 {
 	printf("Error\n");
 	exit(98);
 }
+
 /**
  * main - multiples of two positive numbers
  * @argc: numbers of argument
@@ -55,7 +58,7 @@ int main(int argc, char *argv[])
 
 	s1 = argv[1], s2 = argv[2];
 	if (argc != 3 || !is_digit(s1) || !is_digit(s2))
-		errors();
+		error();
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
 	len = len1 + len2 + 1;
